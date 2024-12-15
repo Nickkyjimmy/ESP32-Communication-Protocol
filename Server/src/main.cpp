@@ -1,11 +1,16 @@
 #include <WiFi.h>
+#include <config.h>
 
 // WiFi credentials
 // Server settings
-const char *ssid = "B4 04.02";
-const char *password = "thanhthuy";
-// const char *ssid = "Redmi Note 12";
-// const char *password = "hahaha1234";
+#ifndef CONFIG_H
+#define CONFIG_H
+
+const char *ssid = "YOUR_SSID";
+const char *password = "YOUR_PASSWORD";
+
+#endif
+
 const int port = 8080;
 const int stopSignal = 20;
 WiFiServer server(port);
